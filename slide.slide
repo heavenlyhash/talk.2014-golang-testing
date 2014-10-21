@@ -18,9 +18,35 @@ Read at at least through slide 9.
 
 * golang has built in testing
 
+hello gophers, wannabe gophers, or gopher-curious!
+
+i'm here to talk to you tonight about testing.
+
+i'm not going to talk about why testing, or philosophies of testing, 
+
+i'm just going to assume you're sold on testing.
+
+which is interesting, because golang feels the same way:
+
+testing is a part of the standard library and core toolchain.
+
+
+
+
+
+
 
 * benchmark
 
 
 * ? talk about race detector
+
+
+* more advanced (read: prettier) testing with goconvey
+
+the `testing` package, like the `net/http` package, is a GREAT starting point.
+
+it also explicitly doesn't try to solve the world's problems.
+
+it's a minimal interface.
 
