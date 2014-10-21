@@ -84,7 +84,63 @@ what do you actually need to make tests?
 
 
 
+* what else goes with testing?
+
+* what else goes with testing?
+
+- benchmarking
+
+- coverage
+
+
 * benchmark
+
+- benchmarking is pretty much the same thing as unit testing
+
+- you just run it repeatedly
+
+- and count
+
+* benchmark
+
+- if you've ever tried to benchmark using the tools at hand...
+
+- when the tools at hand are something like jUnit...
+
+- you have Experienced Bij
+
+** benchmark
+
+- this is something the QA department at code42 jokes about
+
+- or at least the ones with a major Star Trek infatuation
+
+** benchmark
+
+- Bij is the Klingon hell.
+
+** benchmark
+
+- Trial by combat
+
+** benchmark
+
+- if you've ever tried to benchmark using the tools at hand...
+
+- when the tools at hand are something like jUnit...
+
+- you have experienced trial by combat
+
+
+* benchmarking in go
+
+- now we have `testing.B`
+
+- is it that simple?
+
+- yes
+
+
 
 
 * ? talk about race detector
