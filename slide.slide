@@ -1,0 +1,26 @@
+Testing in Go
+Safely Enhance Your Confidence Stronger, Naturally!
+18:00 22 Oct 2014
+Tags: testing, tdd, goconvey, gomn
+
+Eric Myhre
+hash@exultant.us
+https://polydawn.net/
+
+
+* First...
+
+http://talks.golang.org/2014/testing.slide
+
+Read at at least through slide 9.
+# You can check out the rest of the slides on your own time; they're a little heavy for now and also talk a lot about http.
+
+
+* golang has built in testing
+
+
+* benchmark
+
+
+* ? talk about race detector
+
