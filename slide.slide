@@ -31,8 +31,56 @@ which is interesting, because golang feels the same way:
 testing is a part of the standard library and core toolchain.
 
 
+* golang testing is a minimal interface
 
 
+* actually, it's not an interface
+
+- this is probably the worst thing about it
+
+just keep calm and carry on
+
+
+** golang testing is a minimal interface
+
+what do you actually need to make tests?
+
+- a way to name tests
+
+done: function names
+
+
+** golang testing is a minimal interface
+
+what do you actually need to make tests?
+
+- a way to make asserts
+
+-- well, no actually.
+
+- a way to make the test fail
+
+`t.Fail()`
+
+use `if assertion { t.Fail() }` to dream of your old xUnit ways
+
+
+** golang testing is a minimal interface
+
+what do you actually need to make tests?
+
+- a way to run the tests!
+
+`go test`
+
+`go test -v`
+
+
+** golang testing is a minimal interface
+
+what do you actually need to make tests?
+
+- TODO
 
 
 
@@ -49,4 +97,14 @@ the `testing` package, like the `net/http` package, is a GREAT starting point.
 it also explicitly doesn't try to solve the world's problems.
 
 it's a minimal interface.
+
+
+* more advanced (read: prettier) testing with ???
+
+there are lots of others!
+
+- ginkgo
+- you can even do gherkin if you're into, well, that.
+- ____???____
+
 
