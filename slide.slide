@@ -369,6 +369,52 @@ It's a minimal interface.
 
 * more advanced (read: prettier) testing with goconvey
 
+One of my favorite tools right now is GoConvey.
+
+I'll skip right to the moneyshot:
+
+.image goconvey-success-terminal.png
+
+Love me some little green checkboxes.
+
+
+* more advanced (read: prettier) testing with goconvey
+
+Matching source:
+
+	func TestGitattributesFiltering(t *testing.T) {
+		Convey("Given some gitattributes string", t, func() {
+			raw := []byte(strings.Join([]string{
+				"some/pattern/path k1=val1 k2=val2",
+				"",
+				"pattern2\t\tka=val1",
+				"pattern3 kb=val1",
+			}, "\n"))
+
+			Convey("The entries should be parsible", func() {
+				ga := ParseGitAttribs(raw)
+
+				So(len(ga.Lines), ShouldEqual, 5)
+				So(ga.Lines[0].Pattern, ShouldEqual, "some/pattern/path")
+				So(ga.Lines[1].Pattern, ShouldEqual, "")
+				So(ga.Lines[2].Pattern, ShouldEqual, "pattern2")
+				So(ga.Lines[3].Pattern, ShouldEqual, "pattern3")
+			})
+
+
+* more advanced (read: prettier) testing with goconvey
+
+Error highlighting is similarly fantastic:
+
+.image goconvey-failure-terminal.png
+
+
+* more advanced (read: prettier) testing with goconvey
+
+Web prettiness with autorebuild, oh my:
+
+.image goconvey-web.png 400 _
+
 
 * more advanced (read: prettier) testing with ???
 
