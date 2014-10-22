@@ -22,15 +22,6 @@ hello gophers, wannabe gophers, or gopher-curious!
 
 i'm here to talk to you tonight about testing.
 
-but first, a mini-lightning talk!
-
-
-* how to set up a golang dev environment
-
-`
-curl TODO
-`
-
 
 * golang has built in testing
 
