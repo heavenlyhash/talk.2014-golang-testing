@@ -29,6 +29,8 @@ i'm not going to talk about why testing, or philosophies of testing,
 
 i'm just going to assume you're sold on testing.
 
+# i'm going to assume you already know that if you're not writing tests, you're not writing software (you're writing a fairy tale)
+
 which is interesting, because golang feels the same way:
 
 
@@ -42,6 +44,8 @@ testing is a part of the standard library and core toolchain.
 `testing` is a package.
 
 `testing.T` provides everything you need to make tests.
+
+`go test` knows what these are, and it uses them for great good.
 
 
 * golang testing is a minimal interface
@@ -287,6 +291,7 @@ it's a minimal interface.
 
 there are lots of others!
 
+- assrt
 - ginkgo
 - you can even do gherkin if you're into, well, that.
 - ____???____
