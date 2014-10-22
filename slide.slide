@@ -42,25 +42,38 @@ testing is a part of the standard library and core toolchain.
 
 * golang testing is a minimal interface
 
-what do you actually need to make tests?
+_What_do_you_actually_need_to_make_tests?_
 
 
 * golang testing is a minimal interface
 
-what do you actually need to make tests?
+_What_do_you_actually_need_to_make_tests?_
 
-- a way to name the tests
+1. A way to name the tests.
 
-done: function names
+Done:
 
-.code test-name.go
+	import (
+		"testing"
+	)
+
+	func TestMyThings(t *testing.T) {
+
+	}
+
+Function names.
 
 
 * golang testing is a minimal interface
 
-What do you actually need to make tests?
+_What_do_you_actually_need_to_make_tests?_
 
-- a way to make asserts
+1. A way to name the tests.
+2. A way to make asserts.
+
+\.
+\.
+\.
 
 Well, no actually.
 
@@ -68,24 +81,35 @@ Well, no actually.
 
 * golang testing is a minimal interface
 
-What do you actually need to make tests?
+_What_do_you_actually_need_to_make_tests?_
 
-- a way to make the test fail
+1. A way to name the tests.
+2. A way to make the test fail!
+
+Done:
 
 	t.Fail()
+
+There are other methods that do the same thing plus an error message, but they all boil down to this.
 
 Use `if`assertion`{`t.Fail()`}` to dream of your old {x}Unit ways
 
 
 * golang testing is a minimal interface
 
-what do you actually need to make tests?
+_What_do_you_actually_need_to_make_tests?_
 
-- a way to run the tests!
+1. A way to name the tests.
+2. A way to make the test fail!
+3. A way to run the tests!
 
-`go test`
+Done:
 
-`go test -v`
+	go test
+
+Or,
+
+	go test -v
 
 
 * go test output
