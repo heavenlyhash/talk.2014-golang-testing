@@ -362,22 +362,32 @@ This race detector can shortcut through millions of CPU-hours of testing.
 That saves whole percentage points of human sanity.
 
 
+
+* we have to go deeper
+
+
+* we have to go deeper
+
+The `testing` package, like the `net/http` package, is a GREAT starting point.
+
+It also explicitly doesn't try to solve the world's problems.
+
+It's a minimal interface.
+
+
 * more advanced (read: prettier) testing with goconvey
-
-the `testing` package, like the `net/http` package, is a GREAT starting point.
-
-it also explicitly doesn't try to solve the world's problems.
-
-it's a minimal interface.
 
 
 * more advanced (read: prettier) testing with ???
 
 there are lots of others!
 
-- assrt
-- ginkgo
-- you can even do gherkin if you're into, well, that.
-- ____???____
+[[https://github.com/coocood/assrt/][github.com/coocood/assrt]] does assert statements, no fluff
+
+[[https://github.com/onsi/ginkgo/][github.com/onsi/ginkgo]] is a big bag of BDD like goconvey
+
+you can even sit around [[https://github.com/harlanji/gogherkit][gherkin]] off if you're... well, into that.
+
+audience suggestions?
 
 
