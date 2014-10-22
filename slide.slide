@@ -8,14 +8,6 @@ hash@exultant.us
 https://polydawn.net/
 
 
-* First...
-
-http://talks.golang.org/2014/testing.slide
-
-Read at at least through slide 9.
-# You can check out the rest of the slides on your own time; they're a little heavy for now and also talk a lot about http.
-
-
 * golang testing
 
 hello gophers, wannabe gophers, or gopher-curious!
@@ -389,5 +381,16 @@ there are lots of others!
 you can even sit around [[https://github.com/harlanji/gogherkit][gherkin]] off if you're... well, into that.
 
 audience suggestions?
+
+
+* further reading
+
+[[http://talks.golang.org/2014/testing.slide][talks.golang.org/2014/testing.slide]] is a great talk by the core golang folk
+
+(Some slides lovingly borrowed from that -- but there's lots more there)
+
+[[http://blog.golang.org/cover][blog.golang.org/cover]]
+
+[[http://blog.golang.org/race-detector][blog.golang.org/race-detector]]
 
 
