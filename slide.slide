@@ -273,9 +273,66 @@ Results!
 
 
 
+* coverage
 
 
-* ? talk about race detector
+* coverage
+
+The `go` tool can report test coverage statistics.
+
+	$ go test -cover
+	PASS
+	coverage: 96.4% of statements
+	ok strings 0.692s
+
+The `go` tool can generate coverage profiles that may be intepreted by the `cover` tool.
+
+	$ go test -coverprofile=cover.out
+	$ go tool cover -func=cover.out
+	strings/reader.go: Len 66.7%
+	strings/strings.go: TrimSuffix 100.0%
+	... many lines omitted ...
+	strings/strings.go: Replace 100.0%
+	strings/strings.go: EqualFold 100.0%
+	total: (statements) 96.4%
+
+* coverage visualization
+
+	$ go tool cover -html=cover.out
+
+.image cover.png
+
+* coverage visualization
+
+You can also ask `go` to count how heavily code paths are hit:
+
+	$ go test -covermode=count -coverprofile=cover.out
+	$ go tool cover -html=cover.out
+
+.image cover-count.png
+
+
+* what else is cool?
+
+
+* automatic race detection
+
+Just add `-race`:
+
+	$ go test -race mypkg
+
+The compiler will add instrumentation that does data tainting, which can instantly detect unsynchronized memory access from threads.
+
+This works _even_without_actually_experiencing_a_race_.
+
+
+* automatic race detection
+
+It's impossible to express how awesome this is.
+
+This race detector can shortcut through millions of CPU-hours of testing.
+
+That saves whole percentage points of human sanity.
 
 
 * more advanced (read: prettier) testing with goconvey
