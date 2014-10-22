@@ -16,11 +16,23 @@ Read at at least through slide 9.
 # You can check out the rest of the slides on your own time; they're a little heavy for now and also talk a lot about http.
 
 
-* golang has built in testing
+* golang testing
 
 hello gophers, wannabe gophers, or gopher-curious!
 
 i'm here to talk to you tonight about testing.
+
+but first, a mini-lightning talk!
+
+
+* how to set up a golang dev environment
+
+`
+curl TODO
+`
+
+
+* golang has built in testing
 
 i'm not going to talk about why testing, or philosophies of testing, 
 
@@ -41,7 +53,7 @@ testing is a part of the standard library and core toolchain.
 just keep calm and carry on
 
 
-** golang testing is a minimal interface
+* golang testing is a minimal interface
 
 what do you actually need to make tests?
 
@@ -50,7 +62,7 @@ what do you actually need to make tests?
 done: function names
 
 
-** golang testing is a minimal interface
+* golang testing is a minimal interface
 
 what do you actually need to make tests?
 
@@ -65,7 +77,7 @@ what do you actually need to make tests?
 use `if assertion { t.Fail() }` to dream of your old xUnit ways
 
 
-** golang testing is a minimal interface
+* golang testing is a minimal interface
 
 what do you actually need to make tests?
 
@@ -76,7 +88,7 @@ what do you actually need to make tests?
 `go test -v`
 
 
-** golang testing is a minimal interface
+* golang testing is a minimal interface
 
 what do you actually need to make tests?
 
@@ -85,6 +97,8 @@ what do you actually need to make tests?
 
 
 * what else goes with testing?
+
+
 
 * what else goes with testing?
 
@@ -95,11 +109,15 @@ what do you actually need to make tests?
 
 * benchmark
 
+
+* benchmark
+
 - benchmarking is pretty much the same thing as unit testing
 
 - you just run it repeatedly
 
 - and count
+
 
 * benchmark
 
@@ -109,21 +127,25 @@ what do you actually need to make tests?
 
 - you have Experienced Bij
 
-** benchmark
+
+* benchmark
 
 - this is something the QA department at code42 jokes about
 
 - or at least the ones with a major Star Trek infatuation
 
-** benchmark
+
+* benchmark
 
 - Bij is the Klingon hell.
 
-** benchmark
+
+* benchmark
 
 - Trial by combat
 
-** benchmark
+
+* benchmark
 
 - if you've ever tried to benchmark using the tools at hand...
 
