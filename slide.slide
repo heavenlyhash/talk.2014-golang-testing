@@ -23,7 +23,7 @@ hello gophers, wannabe gophers, or gopher-curious!
 i'm here to talk to you tonight about testing.
 
 
-* golang has built in testing
+* golang testing
 
 i'm not going to talk about why testing, or philosophies of testing, 
 
@@ -31,41 +31,50 @@ i'm just going to assume you're sold on testing.
 
 which is interesting, because golang feels the same way:
 
+
+* golang has built in testing
+
+
+* golang has built in testing
+
 testing is a part of the standard library and core toolchain.
 
 
 * golang testing is a minimal interface
 
-
-* actually, it's not an interface
-
-- this is probably the worst thing about it
-
-just keep calm and carry on
+what do you actually need to make tests?
 
 
 * golang testing is a minimal interface
 
 what do you actually need to make tests?
 
-- a way to name tests
+- a way to name the tests
 
 done: function names
 
+.code test-name.go
+
 
 * golang testing is a minimal interface
 
-what do you actually need to make tests?
+What do you actually need to make tests?
 
 - a way to make asserts
 
--- well, no actually.
+Well, no actually.
+
+
+
+* golang testing is a minimal interface
+
+What do you actually need to make tests?
 
 - a way to make the test fail
 
-`t.Fail()`
+	t.Fail()
 
-use `if assertion { t.Fail() }` to dream of your old xUnit ways
+Use `if`assertion`{`t.Fail()`}` to dream of your old {x}Unit ways
 
 
 * golang testing is a minimal interface
@@ -79,11 +88,12 @@ what do you actually need to make tests?
 `go test -v`
 
 
-* golang testing is a minimal interface
+* go test output
 
-what do you actually need to make tests?
+`go`test` output is silent by default.
 
-- TODO
+`go`test`-v` tells you as it walks through things.
+
 
 
 
@@ -103,20 +113,22 @@ what do you actually need to make tests?
 
 * benchmark
 
-- benchmarking is pretty much the same thing as unit testing
+Benchmarking is pretty much the same thing as unit testing...
 
-- you just run it repeatedly
+You just run it again.  And again.
 
-- and count
+(And count some things.)
 
 
 * benchmark
 
-- if you've ever tried to benchmark using the tools at hand...
+Of course, it's not that easy.
 
-- when the tools at hand are something like jUnit...
+If you've ever tried to benchmark using the tools at hand...
 
-- you have Experienced Bij
+When the tools at hand are something like jUnit...
+
+You have _Experienced_Bij_.
 
 
 * benchmark
