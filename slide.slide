@@ -39,6 +39,10 @@ which is interesting, because golang feels the same way:
 
 testing is a part of the standard library and core toolchain.
 
+`testing` is a package.
+
+`testing.T` provides everything you need to make tests.
+
 
 * golang testing is a minimal interface
 
@@ -114,15 +118,45 @@ Or,
 
 * go test output
 
-`go`test` output is silent by default.
+`go`test` is very terse by default:
 
-`go`test`-v` tells you as it walks through things.
+	$ go test polydawn.net/grypt/...
+	FAIL    polydawn.net/grypt/cli          0.036s
+	ok      polydawn.net/grypt/ext/blake2b  0.008s
+	ok      polydawn.net/grypt/gitutil      0.145s
+	?       polydawn.net/grypt/main         [no test files]
+	ok      polydawn.net/grypt/schema       0.007s
+	?       polydawn.net/grypt/testutil     [no test files]
+	ok      polydawn.net/grypt/vault        0.007s
+
+(Psst!  Look at that iteration time!)
+
+Pass/fail is listed per package; nothing else.
+
+
+* go test output
+
+`go`test`-v` tells you much more as it walks through things:
+
+	=== RUN TestSum
+	--- PASS: TestSum (0.00 seconds)
+	=== RUN TestSum256
+	--- PASS: TestSum256 (0.00 seconds)
+	=== RUN TestSumLength
+	--- PASS: TestSumLength (0.00 seconds)
+	=== RUN TestKeyedSum
+	--- PASS: TestKeyedSum (0.00 seconds)
+	PASS
+	ok      polydawn.net/grypt/ext/blake2b  0.008s
+
+By default, stdout/stderr are consumed by the test framework.
+
+`-v` also will let them through again.
 
 
 
 
 * what else goes with testing?
-
 
 
 * what else goes with testing?
@@ -143,16 +177,20 @@ You just run it again.  And again.
 
 (And count some things.)
 
-
-* benchmark
+\.
+\.
+\.
 
 Of course, it's not that easy.
 
-If you've ever tried to benchmark using the tools at hand...
 
-When the tools at hand are something like jUnit...
+* benchmark
 
-You have _Experienced_Bij_.
+- If you've ever tried to benchmark using the tools at hand...
+
+- When the tools at hand are something like jUnit...
+
+- You have _Experienced_Bij_.
 
 
 * benchmark
@@ -188,6 +226,47 @@ You have _Experienced_Bij_.
 - is it that simple?
 
 - yes
+
+
+* benchmarking in go
+
+The source is about as simple as `testing.T`:
+
+	import "testing"
+
+	func BenchmarkMyThing(b *testing.B) {
+		b.ReportAllocs()
+		// ... do work ...
+	}
+
+* benchmarking in go
+
+Results?
+
+	$ go test -bench . polydawn.net/grypt/schema
+	BenchmarkAES256Encrypt1K    50000             52513 ns/op            4598 B/op         31 allocs/op
+	BenchmarkAES256Decrypt1K    50000             63730 ns/op           35736 B/op         26 allocs/op
+	BenchmarkAES256Encrypt4K    10000            147273 ns/op           10736 B/op         31 allocs/op
+	BenchmarkAES256Decrypt4K    10000            137612 ns/op           38808 B/op         26 allocs/op
+	BenchmarkAES256Encrypt1M       50          31593407 ns/op         2099720 B/op         32 allocs/op
+	BenchmarkAES256Decrypt1M      100          25271531 ns/op         1083288 B/op         57 allocs/op
+	BenchmarkAES256Encrypt2M       50          63500107 ns/op         4196872 B/op         32 allocs/op
+	BenchmarkAES256Decrypt2M       50          50713520 ns/op         2131864 B/op         89 allocs/op
+	BenchmarkAES256Encrypt4M       10         127749084 ns/op         8391177 B/op         32 allocs/op
+	BenchmarkAES256Decrypt4M       20         101847749 ns/op         4229016 B/op        153 allocs/op
+	ok      polydawn.net/grypt/schema       25.727s
+
+
+* benchmarking in go
+
+Results!
+
+- Tasks adjust run count to fit in (approximately) constant time frame.
+
+- Time per operation is averaged.  (Notice how the unit is nanoseconds, because this is a REAL programming language.)
+
+- Memory stats too: how many bytes were shuffled, and in how many allocs.
+
 
 
 
